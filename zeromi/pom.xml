@@ -1,0 +1,110 @@
+<!-- Project Build Option Setting (POM : Project Object Model)-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>	<!-- Maven pom.xml Model Version -->
+	<groupId>kr.coo.zeromi</groupId>	<!-- 제작자 식별용 Project Group ID (URL의 역순) -->
+	<artifactId>zeromi</artifactId>		<!-- 고유 Project ID -->
+	<version>0.0.1-SNAPSHOT</version>	<!-- Program Version (Application Version) -->
+	<packaging>war</packaging>			<!-- Project Package Type -->
+  
+	<!-- Constant -->
+	<properties>
+		<java-version>13</java-version>
+		<org.springpramework-version>5.2.2.RELEASE</org.springpramework-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<org.slf4j-version>1.7.25</org.slf4j-version>
+		<junit-version>4.12</junit-version>
+		<jstl-version>1.2</jstl-version>
+		<logback-version>1.2.3</logback-version>
+	</properties>
+  
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<release>13</release>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.3</version>
+				<configuration>
+					<warSourceDirectory>webapp</warSourceDirectory>	
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	
+	<dependencies>
+		<!-- Spring Artifacts -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context</artifactId>
+		    <version>${org.springpramework-version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-core</artifactId>
+		    <version>${org.springpramework-version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-beans</artifactId>
+		    <version>${org.springpramework-version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-web</artifactId>
+		    <version>${org.springpramework-version}</version>
+		</dependency>
+		<dependency>	
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-webmvc</artifactId>
+		    <version>${org.springpramework-version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-aop</artifactId>
+		    <version>${org.springpramework-version}</version>
+		</dependency>
+				
+		<!-- jstl -->
+		<dependency>									<!-- jstl : JSP Standard Tag Library -->
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>${jstl-version}</version>
+		</dependency>
+		
+		<!-- log -->
+		<dependency>									<!-- slf4j : Simple Logging Facade For Java -->
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>${org.slf4j-version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>ch.qos.logback</groupId>
+		    <artifactId>logback-classic</artifactId>
+		    <version>${logback-version}</version>
+		</dependency>
+		
+		
+		<!-- Test Artifacts -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-test</artifactId>
+		    <version>${org.springpramework-version}</version>
+		    <scope>test</scope>
+		</dependency>
+		<dependency>	
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>${junit-version}</version>
+		    <scope>test</scope>
+		</dependency>
+		
+	</dependencies>
+	
+</project>
