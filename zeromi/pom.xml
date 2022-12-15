@@ -9,7 +9,7 @@
 	<!-- Constant -->
 	<properties>
 		<java-version>13</java-version>
-		<org.springpramework-version>5.2.2.RELEASE</org.springpramework-version>
+		<org.springpramework-version>5.2.20.RELEASE</org.springpramework-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<org.slf4j-version>1.7.25</org.slf4j-version>
